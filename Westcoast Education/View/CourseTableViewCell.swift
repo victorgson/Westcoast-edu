@@ -11,18 +11,25 @@ class CourseTableViewCell: UITableViewCell {
 
     @IBOutlet var courseNameLabel: UILabel!
     @IBOutlet var availabilityLabel: UILabel!
-    @IBOutlet var thumbnailImage: UIImageView!
+    @IBOutlet weak var favoriteImage: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
+    var actionBlock: (() -> Void)? = nil
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
+    
+    @IBAction func favoriteSelected(_ sender: UIButton) {
+        actionBlock?()
+    }
+    
 
 }
 

@@ -10,6 +10,7 @@ import UIKit
 class CourseTableViewController: UITableViewController {
 
     
+    
     lazy var dataSource = setupDataSource()
     
     var categories: CourseCategory?
@@ -27,6 +28,8 @@ class CourseTableViewController: UITableViewController {
         snapshot.appendItems(categories!.courses, toSection: .all)
         
         dataSource.apply(snapshot, animatingDifferences: false)
+        
+     
     }
     
     func setupDataSource() -> UITableViewDiffableDataSource<Section, Courses>{
@@ -34,13 +37,26 @@ class CourseTableViewController: UITableViewController {
            
         
         let dataSource = CourseDiffableDataSource(tableView: tableView,
-                                                    cellProvider: {
+                                                  cellProvider: {
             
             tableView,
             indexPath,
             course in let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CourseTableViewCell
             
             cell.courseNameLabel?.text = "\(course.courseName)"
+
+            cell.actionBlock = {
+                //course.courseFavorite.toggle()
+                
+                
+                if(cell.favoriteImage.currentImage == UIImage(systemName: "star.fill")){
+                    cell.favoriteImage.setImage(UIImage(systemName: "star"), for: .normal)
+                } else {
+                    cell.favoriteImage.setImage(UIImage(systemName: "star.fill"), for: .normal)
+                }
+                
+            }
+          
             
             return cell
             

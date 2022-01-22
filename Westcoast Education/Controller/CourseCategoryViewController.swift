@@ -15,10 +15,11 @@ class CourseCategoryViewController: UITableViewController {
     //var category = ["Språk", "Juridik", "IT", "Bygg"]
     
     var categories: [CourseCategory] = [
-        CourseCategory(courseCategory: "Juridik", logoImage: "law", courses: [Courses(courseName: "Law 1", courseDescription: "Law 1", courseStartDate: "12/12/2012", courseEndDate: "12/12/2012", courseRating: 5), Courses(courseName: "Law 2", courseDescription:"Law 2", courseStartDate: "12/12/2012", courseEndDate: "12/12/2012", courseRating: 5)], availableSpots: 5),
-        CourseCategory(courseCategory: "Programmering", logoImage: "programming", courses: [Courses(courseName: "Swift 1", courseDescription: "Swift 1", courseStartDate: "12/12/2012", courseEndDate: "12/12/2012", courseRating: 5), Courses(courseName: "React 2", courseDescription:"React 2", courseStartDate: "12/12/2012", courseEndDate: "12/12/2012", courseRating: 5)], availableSpots: 5),
-        CourseCategory(courseCategory: "Sport", logoImage: "sports", courses: [Courses(courseName: "Sports 1", courseDescription: "Sports 1", courseStartDate: "12/12/2012", courseEndDate: "12/12/2012", courseRating: 5), Courses(courseName: "Sports 2", courseDescription:"Sports 2", courseStartDate: "12/12/2012", courseEndDate: "12/12/2012", courseRating: 5)], availableSpots: 5),
-        CourseCategory(courseCategory: "IT", logoImage: "it", courses: [Courses(courseName: "IT 1", courseDescription: "IT 1", courseStartDate: "12/12/2012", courseEndDate: "12/12/2012", courseRating: 5), Courses(courseName: "IT 2", courseDescription:"IT 2", courseStartDate: "12/12/2012", courseEndDate: "12/12/2012", courseRating: 5)], availableSpots: 5)
+        CourseCategory(courseCategory: "Juridik", logoImage: "law", courses: [Courses(courseName: "Law 1", courseDescription: "Law 1", courseStartDate: "12/12/2012", courseEndDate: "12/12/2012", courseRating: 5, courseFavorite: false), Courses(courseName: "Law 2", courseDescription:"Law 2", courseStartDate: "12/12/2012", courseEndDate: "12/12/2012", courseRating: 5, courseFavorite: false)], availableSpots: 5),
+        CourseCategory(courseCategory: "Programmering", logoImage: "programming", courses: [Courses(courseName: "Swift 1", courseDescription: "Swift 1", courseStartDate: "12/12/2012", courseEndDate: "12/12/2012", courseRating: 5, courseFavorite: false), Courses(courseName: "React 2", courseDescription:"React 2", courseStartDate: "12/12/2012", courseEndDate: "12/12/2012", courseRating: 5, courseFavorite: false)], availableSpots: 5),
+        CourseCategory(courseCategory: "Sport", logoImage: "sports", courses: [Courses(courseName: "Sports 1", courseDescription: "Sports 1", courseStartDate: "12/12/2012", courseEndDate: "12/12/2012", courseRating: 5, courseFavorite: false), Courses(courseName: "Sports 2", courseDescription:"Sports 2", courseStartDate: "12/12/2012", courseEndDate: "12/12/2012", courseRating: 5,courseFavorite: false)], availableSpots: 5),
+        CourseCategory(courseCategory: "IT", logoImage: "it", courses: [Courses(courseName: "IT 1", courseDescription: "IT 1", courseStartDate: "12/12/2012", courseEndDate: "12/12/2012", courseRating: 5,courseFavorite: false), Courses(courseName: "IT 2", courseDescription:"IT 2", courseStartDate: "12/12/2012", courseEndDate: "12/12/2012", courseRating: 5,courseFavorite: false)], availableSpots: 5),
+        CourseCategory(courseCategory: "Bygg", logoImage: "it", courses: [Courses(courseName: "Bygg 1", courseDescription: "IT 1", courseStartDate: "12/12/2012", courseEndDate: "12/12/2012", courseRating: 5,courseFavorite: false), Courses(courseName: "Bygg 2", courseDescription:"IT 2", courseStartDate: "12/12/2012", courseEndDate: "12/12/2012", courseRating: 5,courseFavorite: false)], availableSpots: 5)
         
     ]
     
@@ -39,6 +40,10 @@ class CourseCategoryViewController: UITableViewController {
         snapshot.appendItems(categories, toSection: .all)
         
         dataSource.apply(snapshot, animatingDifferences: false)
+        
+        //hides the Safe Area
+        tableView.contentInsetAdjustmentBehavior = .never
+    
     }
     
     func setupDataSource() -> CategoryDiffableDataSource{

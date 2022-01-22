@@ -14,13 +14,15 @@ struct Courses: Hashable {
     var courseStartDate: String
     var courseEndDate: String
     var courseRating: Int
+    var courseFavorite: Bool
     
     init(courseName: String, courseDescription: String, courseStartDate: String, courseEndDate: String,
-         courseRating: Int) {
+         courseRating: Int, courseFavorite: Bool) {
         self.courseName = courseName
         self.courseDescription = courseDescription
         self.courseStartDate = courseStartDate
         self.courseEndDate = courseEndDate
         self.courseRating = courseRating
+        self.courseFavorite = courseFavorite
     }
 }
