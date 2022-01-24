@@ -10,7 +10,6 @@ import UIKit
 class CourseTableViewCell: UITableViewCell {
 
     @IBOutlet var courseNameLabel: UILabel!
-    @IBOutlet var availabilityLabel: UILabel!
     @IBOutlet weak var favoriteImage: UIButton!
     
     override func awakeFromNib() {

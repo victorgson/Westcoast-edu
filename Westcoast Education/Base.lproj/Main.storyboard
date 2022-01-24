@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GPs-dH-FGe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nal-Jn-BBU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CourseDetailsViewController" customModule="Westcoast_Education" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="it" translatesAutoresizingMaskIntoConstraints="NO" id="puu-DG-Pwf">
@@ -21,22 +21,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="Mtl-Hs-Ynu">
-                                <rect key="frame" x="60" y="319.5" width="294" height="203.5"/>
+                                <rect key="frame" x="60" y="268" width="294" height="360.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CourseName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gae-Ox-KwY">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CourseName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gae-Ox-KwY">
                                         <rect key="frame" x="71.5" y="0.0" width="151.5" height="29"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CourseDesc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTM-zm-Fwo">
-                                        <rect key="frame" x="100.5" y="58" width="93.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" editable="NO" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="515-3t-F36">
+                                        <rect key="frame" x="1.5" y="58" width="291" height="164"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="47" translatesAutoresizingMaskIntoConstraints="NO" id="PQO-DG-iG0">
-                                        <rect key="frame" x="0.0" y="107.5" width="294" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="251" width="294" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CourseStartDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQU-cE-EUb">
                                                 <rect key="frame" x="0.0" y="0.0" width="127.5" height="20.5"/>
@@ -53,23 +54,31 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aW-Kq-PkR">
-                                        <rect key="frame" x="63.5" y="157" width="167" height="46.5"/>
+                                        <rect key="frame" x="63.5" y="300.5" width="167" height="60"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Anmälan" subtitle="Registrera för denna kurs" titleAlignment="center"/>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="515-3t-F36" secondAttribute="trailing" constant="1.5" id="PJZ-RJ-ED1"/>
+                                    <constraint firstItem="515-3t-F36" firstAttribute="leading" secondItem="Mtl-Hs-Ynu" secondAttribute="leading" constant="1.5" id="fLK-hg-j97"/>
+                                    <constraint firstItem="515-3t-F36" firstAttribute="top" secondItem="gae-Ox-KwY" secondAttribute="bottom" constant="29" id="oH5-Kc-1AC"/>
+                                    <constraint firstItem="PQO-DG-iG0" firstAttribute="top" secondItem="515-3t-F36" secondAttribute="bottom" constant="29" id="r9u-X1-aR5"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Mtl-Hs-Ynu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="f8G-lN-C6G"/>
-                            <constraint firstItem="Mtl-Hs-Ynu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zbK-WW-wXa"/>
+                            <constraint firstItem="Mtl-Hs-Ynu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="36c-Ak-BQy"/>
+                            <constraint firstItem="Mtl-Hs-Ynu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="180" id="Bqi-fc-Zb3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mtl-Hs-Ynu" secondAttribute="bottom" constant="233.5" id="OdD-CS-gSZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mtl-Hs-Ynu" secondAttribute="trailing" constant="60" id="jH1-Lj-Ewq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jrq-6Y-r26"/>
                     <connections>
-                        <outlet property="courseDesc" destination="jTM-zm-Fwo" id="K8U-dj-RaP"/>
+                        <outlet property="courseDesc" destination="515-3t-F36" id="iyU-GF-fFI"/>
                         <outlet property="courseEndDate" destination="lJh-uZ-yH1" id="Dia-c0-g1o"/>
                         <outlet property="courseName" destination="gae-Ox-KwY" id="EOM-WT-BqD"/>
                         <outlet property="courseStartDate" destination="aQU-cE-EUb" id="Vel-GU-CKF"/>
@@ -79,12 +88,12 @@
             </objects>
             <point key="canvasLocation" x="811.59420289855075" y="-589.28571428571422"/>
         </scene>
-        <!--Course Table View Controller-->
+        <!--Kurser-->
         <scene sceneID="JyT-GS-ero">
             <objects>
                 <tableViewController id="a8Z-td-Z1h" customClass="CourseTableViewController" customModule="Westcoast_Education" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="LRt-6u-3gd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -102,37 +111,24 @@
                                                 <action selector="favoriteSelected:" destination="JpO-56-98Y" eventType="touchUpInside" id="k4m-GN-nlp"/>
                                             </connections>
                                         </button>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="99" translatesAutoresizingMaskIntoConstraints="NO" id="c4T-4A-rMk">
-                                            <rect key="frame" x="134" y="26" width="146" height="140"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kursnamn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCd-Vc-Kbc">
-                                                    <rect key="frame" x="35" y="0.0" width="76.5" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Antal lediga platser" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONZ-UH-Bxg">
-                                                    <rect key="frame" x="0.0" y="119.5" width="146" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kursnamn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCd-Vc-Kbc">
+                                            <rect key="frame" x="0.0" y="26" width="414" height="140"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="QmQ-l2-EFL" secondAttribute="trailing" constant="13" id="6Ew-ap-uL6"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="c4T-4A-rMk" secondAttribute="bottom" constant="15" id="BNu-6Q-LQ6"/>
-                                        <constraint firstItem="QmQ-l2-EFL" firstAttribute="leading" secondItem="c4T-4A-rMk" secondAttribute="trailing" constant="74" id="F76-zY-s8h"/>
-                                        <constraint firstItem="c4T-4A-rMk" firstAttribute="leading" secondItem="Rf8-6H-mXX" secondAttribute="leadingMargin" constant="114" id="UWb-Om-SRn"/>
-                                        <constraint firstItem="c4T-4A-rMk" firstAttribute="top" secondItem="Rf8-6H-mXX" secondAttribute="topMargin" constant="15" id="YHy-8E-PdG"/>
+                                        <constraint firstItem="FCd-Vc-Kbc" firstAttribute="leading" secondItem="Rf8-6H-mXX" secondAttribute="leading" id="QQo-LI-3KW"/>
+                                        <constraint firstAttribute="bottom" secondItem="FCd-Vc-Kbc" secondAttribute="bottom" constant="26" id="fRn-DE-vCQ"/>
                                         <constraint firstAttribute="bottom" secondItem="QmQ-l2-EFL" secondAttribute="bottom" constant="137" id="iDO-nt-YnH"/>
+                                        <constraint firstItem="FCd-Vc-Kbc" firstAttribute="top" secondItem="Rf8-6H-mXX" secondAttribute="top" constant="26" id="lFN-rF-n3h"/>
                                         <constraint firstItem="QmQ-l2-EFL" firstAttribute="top" secondItem="Rf8-6H-mXX" secondAttribute="top" constant="17" id="tTK-cN-MUE"/>
-                                        <constraint firstItem="QmQ-l2-EFL" firstAttribute="leading" secondItem="c4T-4A-rMk" secondAttribute="trailing" constant="74" id="uvF-iX-CsA"/>
+                                        <constraint firstAttribute="trailing" secondItem="FCd-Vc-Kbc" secondAttribute="trailing" id="zRe-YZ-Pbg"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="availabilityLabel" destination="ONZ-UH-Bxg" id="Ath-aS-j0p"/>
                                     <outlet property="courseNameLabel" destination="FCd-Vc-Kbc" id="AMU-hN-fve"/>
                                     <outlet property="favoriteImage" destination="QmQ-l2-EFL" id="e9n-Fc-nio"/>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="courseDetail" id="FHd-Sa-phh"/>
@@ -144,10 +140,27 @@
                             <outlet property="delegate" destination="a8Z-td-Z1h" id="LdT-qt-PNo"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Kurser" id="O8h-qL-sxI"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ss-nX-fvx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-26.086956521739133" y="-589.28571428571422"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UfQ-Uv-edH">
+            <objects>
+                <navigationController id="nal-Jn-BBU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="54B-cb-TG1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GPs-dH-FGe" kind="relationship" relationship="rootViewController" id="jtw-ce-TZg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aye-hh-Hs2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1877" y="-589"/>
         </scene>
         <!--Course Category View Controller-->
         <scene sceneID="LLM-mp-Jud">
@@ -168,8 +181,8 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gV9-qX-AQp">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="195"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="200" id="1CR-Df-eW3"/>
-                                                <constraint firstAttribute="width" constant="100" id="FwB-W3-sPJ"/>
+                                                <constraint firstAttribute="width" constant="414" id="GcQ-dm-Htv"/>
+                                                <constraint firstAttribute="height" constant="195" id="zEx-eI-XGG"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kurskategori" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efa-PB-V6V">
@@ -181,9 +194,13 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Efa-PB-V6V" firstAttribute="centerX" secondItem="orS-gl-WZM" secondAttribute="centerX" id="FYj-lF-4JK"/>
+                                        <constraint firstItem="gV9-qX-AQp" firstAttribute="leading" secondItem="orS-gl-WZM" secondAttribute="leading" id="HRo-Hw-T4c"/>
                                         <constraint firstItem="gV9-qX-AQp" firstAttribute="top" secondItem="orS-gl-WZM" secondAttribute="top" id="Sjj-H7-wEe"/>
+                                        <constraint firstItem="gV9-qX-AQp" firstAttribute="top" secondItem="orS-gl-WZM" secondAttribute="top" id="U5e-0P-CON"/>
                                         <constraint firstItem="gV9-qX-AQp" firstAttribute="leading" secondItem="orS-gl-WZM" secondAttribute="leading" id="bdK-Aj-Ztp"/>
+                                        <constraint firstAttribute="bottom" secondItem="gV9-qX-AQp" secondAttribute="bottom" id="j5Y-ZT-Wgo"/>
                                         <constraint firstAttribute="bottom" secondItem="gV9-qX-AQp" secondAttribute="bottom" id="mUw-tL-pYW"/>
+                                        <constraint firstAttribute="trailing" secondItem="gV9-qX-AQp" secondAttribute="trailing" id="oJQ-rZ-tiV"/>
                                         <constraint firstAttribute="trailing" secondItem="gV9-qX-AQp" secondAttribute="trailing" id="r46-gg-Of0"/>
                                         <constraint firstItem="Efa-PB-V6V" firstAttribute="centerY" secondItem="orS-gl-WZM" secondAttribute="centerY" id="tZo-RN-Msl"/>
                                     </constraints>
@@ -191,7 +208,7 @@
                                 <connections>
                                     <outlet property="courseCategoryName" destination="Efa-PB-V6V" id="hzJ-yL-dLM"/>
                                     <outlet property="courseImageName" destination="gV9-qX-AQp" id="TT6-qA-qQQ"/>
-                                    <segue destination="a8Z-td-Z1h" kind="showDetail" identifier="courseList" id="kfj-BW-Fa7"/>
+                                    <segue destination="a8Z-td-Z1h" kind="show" identifier="courseList" id="kfj-BW-Fa7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -200,6 +217,7 @@
                             <outlet property="delegate" destination="GPs-dH-FGe" id="Kkd-Ik-MuE"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="a37-Dt-IA2"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aUM-8H-Yl0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -209,6 +227,9 @@
     <resources>
         <image name="it" width="2005" height="1338.5"/>
         <image name="star" catalog="system" width="128" height="116"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -15,6 +15,8 @@ class CourseTableViewController: UITableViewController {
     
     var categories: CourseCategory?
     
+    var favorited: Bool = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,17 +47,20 @@ class CourseTableViewController: UITableViewController {
             
             cell.courseNameLabel?.text = "\(course.courseName)"
 
+    
+            
             cell.actionBlock = {
                 //course.courseFavorite.toggle()
-                
                 
                 if(cell.favoriteImage.currentImage == UIImage(systemName: "star.fill")){
                     cell.favoriteImage.setImage(UIImage(systemName: "star"), for: .normal)
                 } else {
                     cell.favoriteImage.setImage(UIImage(systemName: "star.fill"), for: .normal)
                 }
-                
             }
+                
+            
+            
           
             
             return cell
@@ -86,9 +91,7 @@ class CourseTableViewController: UITableViewController {
         let favoriteAction = UIContextualAction(style: .normal, title: "Favorite") {
             (action, sourceView, completionHandler) in
             var snapshot = self.dataSource.snapshot()
-        
-            //TODO: Do not delete, set maybe color to of the cell to another color bcus favorite
-            snapshot.deleteItems([courses])
+           
             
             self.dataSource.apply(snapshot, animatingDifferences: false)
             
@@ -104,6 +107,11 @@ class CourseTableViewController: UITableViewController {
        override var prefersStatusBarHidden: Bool{
            return true
        }
+    
+    func setFavorite(favorite: Bool){
+        self.favorited = favorite
+        
+    }
 
 }
 

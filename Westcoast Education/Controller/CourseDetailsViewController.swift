@@ -12,7 +12,7 @@ class CourseDetailsViewController: UIViewController {
     
       
     @IBOutlet weak var courseName: UILabel!
-    @IBOutlet weak var courseDesc: UILabel!
+    @IBOutlet weak var courseDesc: UITextView!
     @IBOutlet weak var courseStartDate: UILabel!
     @IBOutlet weak var courseEndDate: UILabel!
     var courseNameText = ""
