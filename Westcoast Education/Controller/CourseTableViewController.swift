@@ -43,25 +43,12 @@ class CourseTableViewController: UITableViewController {
             
             tableView,
             indexPath,
-            course in let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CourseTableViewCell
+            course in let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! C ourseTableViewCell
             
             cell.courseNameLabel?.text = "\(course.courseName)"
 
     
-            
-            cell.actionBlock = {
-                //course.courseFavorite.toggle()
-                
-                if(cell.favoriteImage.currentImage == UIImage(systemName: "star.fill")){
-                    cell.favoriteImage.setImage(UIImage(systemName: "star"), for: .normal)
-                } else {
-                    cell.favoriteImage.setImage(UIImage(systemName: "star.fill"), for: .normal)
-                }
-            }
-                
-            
-            
-          
+        
             
             return cell
             
@@ -83,6 +70,9 @@ class CourseTableViewController: UITableViewController {
        }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+
+     
         guard let courses = self.dataSource.itemIdentifier(for: indexPath) else {
             return UISwipeActionsConfiguration()
             
@@ -91,14 +81,24 @@ class CourseTableViewController: UITableViewController {
         let favoriteAction = UIContextualAction(style: .normal, title: "Favorite") {
             (action, sourceView, completionHandler) in
             var snapshot = self.dataSource.snapshot()
-           
+            
+            let cell = tableView.cellForRow(at: indexPath) as! CourseTableViewCell
+            
+            if(cell.favoriteImage.currentImage == UIImage(systemName: "star.fill")){
+                cell.favoriteImage.setImage(UIImage(systemName: "star"), for: .normal)
+            } else {
+                cell.favoriteImage.setImage(UIImage(systemName: "star.fill"), for: .normal)
+            }
+            
             
             self.dataSource.apply(snapshot, animatingDifferences: false)
             
             completionHandler(true)
         }
         
-        favoriteAction.image = UIImage(systemName: "favorite")
+        favoriteAction.backgroundColor = UIColor(named: "swipeColor")
+        
+  
         
         let swipeConfig = UISwipeActionsConfiguration(actions: [favoriteAction])
         return swipeConfig
@@ -108,10 +108,7 @@ class CourseTableViewController: UITableViewController {
            return true
        }
     
-    func setFavorite(favorite: Bool){
-        self.favorited = favorite
-        
-    }
+
 
 }
 

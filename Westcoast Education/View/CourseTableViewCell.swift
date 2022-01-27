@@ -25,6 +25,7 @@ class CourseTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    
     @IBAction func favoriteSelected(_ sender: UIButton) {
         actionBlock?()
     }
