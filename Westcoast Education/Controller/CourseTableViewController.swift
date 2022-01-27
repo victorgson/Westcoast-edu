@@ -43,7 +43,7 @@ class CourseTableViewController: UITableViewController {
             
             tableView,
             indexPath,
-            course in let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! C ourseTableViewCell
+            course in let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CourseTableViewCell
             
             cell.courseNameLabel?.text = "\(course.courseName)"
 
